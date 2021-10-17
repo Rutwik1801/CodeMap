@@ -4,7 +4,10 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { AccountCircle } from '@material-ui/icons';
 import {makeStyles} from '@material-ui/core/styles'
- 
+import Link from 'next/link' 
+import { Grid } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+
 const classes = makeStyles(({
                
                icon : {
@@ -17,7 +20,19 @@ const classes = makeStyles(({
 
 export default function SimpleMenu() {
 
-               const style = classes();
+  const isSigned = useSelector((state)=>state.auth.signed);    
+  
+  let bool;
+
+  if ( isSigned === null){
+    bool = false
+  }else { 
+    bool = true
+  }
+
+
+
+  const style = classes();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -30,10 +45,21 @@ export default function SimpleMenu() {
   };
 
   return (
-     <div>
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+     <Grid container  style={{
+       backgroundColor:'white'
+     }}>
+     <Grid item md={10} sm={11}>
+       
+       <b>Icon</b>
+     </Grid>
+     <Grid item md={2} sm={1}>
+     <b>Notification</b>
+      
+
+       {bool ? <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
       <AccountCircle className={style.icon} />
-      </Button>
+      </Button> : <Button> Sign up </Button> }  
+      
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -41,10 +67,11 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/myProfile'>Profile</Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/Authentication'>My Account</Link></MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
-    </div>
+    </Grid>
+    </Grid>
   );
 }

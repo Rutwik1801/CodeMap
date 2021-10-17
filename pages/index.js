@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react'
-import Box from '../components/Box'
-import styles from '../styles/Home.module.css'
-import NavigationBar from '../components/NavigationBar/Navigation.jsx'
+import React from 'react'
+import FrontHend from '../UX/frontPage';
+import Header from '../UX/header'
+import Footer from '../UX/footer'
+import Card from '../UX/card'
 function WorkSpace() {
+
   return (
-    
-    <div className={styles.frame} >
-   <NavigationBar />
-    
-    
-    
-    </div> 
+    <div >
+      <Header />
+      <FrontHend />
+      <Card />
+      <Footer />
+    </div>
   )
 }
 

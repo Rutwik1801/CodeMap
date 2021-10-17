@@ -1,45 +1,48 @@
- export const sideFileData  = [
-                {
-                id : 1 , 
-                containerName : 'Function',
-                color:'yellow'
-               },
-                {
-                id : 2 , 
-                containerName : 'Array',
-                color:'Blue'
-               },
-                {
-                id : 3 , 
-                containerName : 'Import',
-                color:'skyBlue'
-               },
-                {
-                id : 4 , 
-                containerName : 'Export',
-                color:'lightRed'
-               },
-                {
-                id : 5 , 
-                containerName : 'State',
-                color:'D6D2C4'
-               },
-                {
-                id : 6 , 
-                containerName : 'Destination Used',
-                color:'66DE93'
-               },
-                {
-                id : 7 , 
-                containerName : 'return',
-                color:'D83A56'
-               },
-                {
-                id : 8 , 
-                containerName : 'Customised Component',
-                color:'9FE6A0'
-               },
-               
-               
- ]
-     
+
+export const sideFileData = [
+    {
+        id: 1,
+        containerName: 'Function',
+        color: '#A2EF44'
+    },
+    {
+        id: 2,
+        containerName: 'Array',
+        color: '#FFD5E5'
+    },
+    {
+
+        id: 3,
+        containerName: 'Import',
+        color: '#FFC045'
+    },
+    {
+
+        id: 4,
+        containerName: 'Export',
+        color: '#D62AD0'
+    },
+    {
+        id: 5,
+        containerName: 'State',
+        color: '#FF449F'
+    },
+    {
+        id: 6,
+        containerName: 'Destination Used',
+        color: '#17B794'
+    },
+    {
+
+        id: 7,
+        containerName: 'Return',
+        color: '#FF6F5E'
+    },
+    {
+        id: 8,
+        containerName: 'Customised Component',
+        color: '#C7FFD8'
+    },
+
+]
+
